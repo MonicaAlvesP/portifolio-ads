@@ -1,3 +1,4 @@
+/* === VARIÁVEIS CSS === */
 :root {
   --bg-color: #f8f9fa;
   --primary-color: #2c3e50;
@@ -7,6 +8,7 @@
   --gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
 }
 
+/* === RESET E CONFIGURAÇÕES GERAIS === */
 * {
   margin: 0;
   padding: 0;
@@ -21,16 +23,22 @@ body {
   min-height: 100vh;
 }
 
+/* === CONTAINER PRINCIPAL === */
 .container {
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
 }
 
+/* === CABEÇALHO === */
+header,
+.tagline {
+  color: white;
+}
+
 header {
   background: var(--gradient);
   padding: 1.5rem 0;
-  color: white;
 }
 
 .header-content {
@@ -40,7 +48,9 @@ header {
   gap: 1rem;
 }
 
-.profile h1 {
+/* === PERFIL/AVATAR === */
+.profile h1,
+.profile {
   color: white;
 }
 
@@ -62,9 +72,9 @@ header {
 .tagline {
   font-style: italic;
   font-weight: 200;
-  color: white;
 }
 
+/* === NAVEGAÇÃO === */
 nav {
   width: 100%;
   display: flex;
@@ -90,56 +100,9 @@ nav {
 
 .nav-links a:hover {
   background: var(--accent-color);
-  color: white;
 }
 
-
-
-main section,
-aside {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 10px rgba(184, 137, 244, 0.1);
-}
-
-h2 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 0.3rem;
-  max-width: max-content;
-}
-
-.skills {
-  display: flex;
-  gap: 1.8rem;
-  flex-wrap: wrap;
-  font-size: 2.4rem;
-  color: var(--primary-color);
-}
-
-article {
-  margin-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-article:last-child {
-  border-bottom: none;
-}
-
-article ul {
-  margin-top: 0.6rem;
-  padding-left: 1.5rem;
-  color: var(--text-color);
-}
-
-article ul li {
-  margin-bottom: 0.4rem;
-}
-
+/* === BOTÃO DE LINK === */
 .btn-link {
   display: inline-block;
   margin-top: 0.5rem;
@@ -152,20 +115,79 @@ article ul li {
   border-radius: 8px;
 }
 
+/* === SEÇÕES PRINCIPAIS === */
+main section,
+aside {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(184, 137, 244, 0.1);
+}
+
+/* === TÍTULOS DAS SEÇÕES === */
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.3rem;
+  max-width: max-content;
+}
+
+/* === HABILIDADES/SKILLS === */
+.skills {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+
+/* === ARTIGOS/PROJETOS === */
+article {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+article:last-child {
+  border-bottom: none;
+}
+
+/* === LISTAS (PROJETOS E SIDEBAR) === */
+article ul,
 aside ul {
-  list-style: disc;
   padding-left: 1.5rem;
   color: var(--text-color);
+}
+
+article ul {
+  margin-top: 0.6rem;
+  list-style: initial;
+}
+
+aside ul {
+  list-style: disc;
+}
+
+article ul li,
+aside ul li {
+  margin-bottom: 0.4rem;
 }
 
 aside ul li {
   margin-bottom: 0.5rem;
 }
 
+/* === RODAPÉ === */
+footer,
+footer a {
+  color: white;
+}
+
 footer {
   margin-top: 3rem;
   background: var(--gradient);
-  color: white;
   padding: 1.5rem 0;
   text-align: center;
   font-weight: 600;
@@ -173,10 +195,10 @@ footer {
 }
 
 footer a {
-  color: #fff;
   text-decoration: underline;
 }
 
+/* === RESPONSIVIDADE - TABLETS === */
 @media (max-width: 768px) {
   .header-content {
     align-items: center;
@@ -192,7 +214,6 @@ footer a {
   }
 
   .nav-links {
-    display: flex;
     justify-content: center;
     font-size: 0.9rem;
     gap: 1rem;
@@ -204,6 +225,7 @@ footer a {
   }
 }
 
+/* === RESPONSIVIDADE - MOBILE === */
 @media (max-width: 400px) {
   .profile {
     flex-direction: column;
